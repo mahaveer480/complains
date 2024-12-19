@@ -1,0 +1,99 @@
+<section class="complaint_card">
+    <div class="containerComplaints">
+        <div class="rowCon">
+            <div class="left">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAHwAyAMBIgACEQEDEQH/xAAaAAEBAQEBAQEAAAAAAAAAAAAABQQCAwcB/8QAKxABAAMAAgECBAQHAAAAAAAAAAECAwQREiFBEyIxUSNhcYEFFDI0UqHR/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/APogAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMW/Grrtrpyp/BrWPD5uuvvINol0tpvx+Fjra34vc3nv1mI/76PzW08H+ZyxmYr8OL0jv+mZnr0BVE6cK8Lbj3ym3z28NO5mfLuPq1czW+GUa0rFq1n549/H8ge4z8beeRfS1evgxPjWfe0+8/o55PH+PvX439vWkz15dd2/MGoTM9rZfwze1LTNa3muVpn276h1OFeFtx75Tb57eGnczPl3H1BREmMvjcO/Nm1vj/Netu/6Yifp/pTyv8TOl/wDKsSDsAAAAAAAAAAAAABN5VptzJjbDfTGkR41pSZi0/eVIBi3m944/Kzy0/Dme85jq3U+k+jytjpzI5Ok0tn5UimcX9J9PX1/dSAYItrytsIthpnGU+V5vHUd9e33e/NnScfh5VmbaT49xHpWPeZaAGTg1vhN+NaLTSk95369Jifb9Xl/ELWttTO2W18OvK0ZVmfKftKgAx3r/ADfB0zzyvl6dVrevj9PWP2cRbXlbYRbDTOMp8rzeOo769vu3gJcxtnxr8KuF5mZmK36+XxmfeVKlYpStY+lY6dAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/Z"
+                    class="imgURL" alt="Complaint Image">
+            </div>
+            <div class="right">
+                <h4>Title: <span id="titleComplain">Your Complaint Title</span></h4>
+                <h6>Complain By: <span id="usernameComplain">Complainant Name</span></h6>
+                <h6>Date: <span id="dateComplain"> 10/20/2024 </span></h6>
+                <h6>Status: Active</h6>
+            </div>
+        </div>
+
+        <div class="DescCon">
+            <h6 id="desc">Your Complaint Description Here</h6>
+        </div>
+
+        <div class="btnCon">
+            <button id="buttonEdit">Edit</button>
+            <button id="deleteBtn">Delete</button>
+        </div>
+    </div>
+
+</section>
+
+<!-- >>>>>>>>>>>>>>>>>>>>DOM<<<<<<<<<<<< -->
+<!-- 
+
+// DOM COmplaint
+// const complaintCard = document.createElement('section');
+// complaintCard.className = 'complaint_card';
+
+// const containerComplaints = document.createElement('div');
+// containerComplaints.className = 'containerComplaints';
+// complaintCard.appendChild(containerComplaints);
+
+// const rowCon = document.createElement('div');
+// rowCon.className = 'rowCon';
+// containerComplaints.appendChild(rowCon);
+
+// const leftDiv = document.createElement('div');
+// leftDiv.className = 'left';
+// rowCon.appendChild(leftDiv);
+
+// const img = document.createElement('img');
+// img.src = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAHwAyAMBIgACEQEDEQH/xAAaAAEBAQEBAQEAAAAAAAAAAAAABQQCAwcB/8QAKxABAAMAAgECBAQHAAAAAAAAAAECAwQREiHBEyIxUSNhcYEFFDI0UqHR/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/APogAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMW/Grrtrpyp/BrWPD5uuvvINol0tpvx+Fjra34vc3nv1mI/76PzW08H+ZyxmYr8OL0jv+mZnr0BVE6cK8Lbj3ym3z28NO5mfLuPq1czW+GUa0rFq1n549/H8ge4z8beeRfS1evgxPjWfe0+8/o55PH+PvX439vWkz15dd2/MGoTM9rZfwze1LTNa3muVpn276h1OFeFtx75Tb57eGnczPl3H1BREmMvjcO/Nm1vj/Netu/6Yifp/pTyv8TOl/w/KsSDsAAAAAAAAAAAAABN5VptzJjbDfTGkR41pSZi0/eVIBi3m944/Kzy0/Dme85jq3U+k+jytjpzI5Ok0tn5UimcX9J9PX1/dSAYItrytsIthpnGU+V5vHUd9e33e/NnScfh5VmbaT49xHpWPeZaAGTg1vhN+NaLTSk95369Jifb9Xl/ELWttTO2W18OvK0ZVmfKftKgAx3r/ADfB0zzyvl6dVrevj9PWP2cRbXlbYRbDTOMp8rzeOo769vu3gJcxtnxr8KuF5mZmK36+XxmfeVKlYpStY+lY6dAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/Z';
+// img.className = 'imgURL';
+// img.alt = 'Complaint Image';
+// leftDiv.appendChild(img);
+
+// const rightDiv = document.createElement('div');
+// rightDiv.className = 'right';
+// rowCon.appendChild(rightDiv);
+
+// const title = document.createElement('h4');
+// title.innerHTML = 'Title: <span id="titleComplain">Your Complaint Title</span>';
+// rightDiv.appendChild(title);
+
+// const complainBy = document.createElement('h6');
+// complainBy.innerHTML = 'Complain By: <span id="usernameComplain">Complainant Name</span>';
+// rightDiv.appendChild(complainBy);
+
+// const date = document.createElement('h6');
+// date.innerHTML = 'Date: <span id="dateComplain"> 10/20/2024 </span>';
+// rightDiv.appendChild(date);
+
+// const status = document.createElement('h6');
+// status.textContent = 'Status: Active';
+// rightDiv.appendChild(status);
+
+// const descCon = document.createElement('div');
+// descCon.className = 'DescCon';
+// containerComplaints.appendChild(descCon);
+
+// const descText = document.createElement('h6');
+// descText.id = 'desc';
+// descText.textContent = 'Your Complaint Description Here';
+// descCon.appendChild(descText);
+
+// const btnCon = document.createElement('div');
+// btnCon.className = 'btnCon';
+// containerComplaints.appendChild(btnCon);
+
+// const buttonEdit = document.createElement('button');
+// buttonEdit.id = 'buttonEdit';
+// buttonEdit.textContent = 'Edit';
+// btnCon.appendChild(buttonEdit);
+
+// const deleteBtn = document.createElement('button');
+// deleteBtn.id = 'deleteBtn';
+// deleteBtn.textContent = 'Delete';
+// btnCon.appendChild(deleteBtn);
+
+// document.getElementById('renderComplains').appendChild(complaintCard);
+
+
+-->

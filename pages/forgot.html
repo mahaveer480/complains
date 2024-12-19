@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Forgot Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- firebase -->
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script defer src="../init-firebase.js"></script>
+</head>
+
+<body>
+    <div class="box" id="forgotBox">
+        <h2>Forgot</h2>
+        <div class="inputBox" id="inputBox">
+            <i class="fas fa-envelope icon"></i>
+            <input type="email" id="emailInput" name="email" required="">
+            <label for="email">Email</label>
+            <p class="error" id="emailErr"></p>
+        </div>
+        <div align="center">
+            <button id="sendButton"><i class="fas fa-paper-plane"></i> Send</button>
+        </div>
+        <!-- Message and Back button (hidden initially) -->
+        <div id="messageBox" style="display: none; text-align: center;">
+            <i class="fas fa-check-circle" style="font-size: 2em; color: white;"></i>
+            <p style="color: white; margin-top: 10px;">Email sent successfully!</p>
+            <button id="backButton"><i class="fas fa-arrow-left"></i> Back to Sign in</button>
+        </div>
+    </div>
+
+    <script src="../js/forgot.js"></script>
+</body>
+
+</html>

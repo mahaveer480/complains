@@ -1,0 +1,561 @@
+/* Cards Section */
+.cards-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 40px 20px;
+}
+
+.card {
+    background: rgba(0, 0, 0, .4);
+    color: #ffffffba;
+    width: 90%;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.194);
+    border-radius: 10px;
+    text-align: center;
+    padding: 2px 20px;
+}
+
+
+.card h3 {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.addBtn {
+    border: none;
+    padding: 5px 15px;
+    background-color: #338ffbf2;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: sans-serif;
+    border-radius: 8px;
+    letter-spacing: 1px;
+    outline: none;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 500ms;
+}
+
+#addBtn:hover {
+    background: #338ffbb8;
+
+}
+
+.card p {
+    font-size: 16px;
+}
+
+/* Responsive styles */
+@media (max-width: 720px) {
+    .cards-section {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> complain_section */
+/* General styles */
+.complaint_card {
+    margin: 20px auto;
+    max-width: 90%;
+    /* Adjust for smaller screens */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Transparent background */
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+/* Container and flex layout */
+.containerComplaints {
+    padding: 20px;
+}
+
+.rowCon {
+    display: flex;
+    flex-wrap: wrap;
+    /* For better responsiveness */
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 15px;
+}
+
+/* Image section */
+.left {
+    flex: 0 0 100px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.left img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    /* Slight border */
+}
+
+/* Text content section */
+.right {
+    flex-grow: 1;
+    flex-basis: 200px;
+}
+
+.right h4 {
+    font-size: 18px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.right h6 {
+    font-size: 14px;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Complaint description section */
+.DescCon {
+    margin: 15px 0;
+}
+
+.DescCon h6 {
+    font-size: 14px;
+    color: #444;
+    background-color: rgba(0, 0, 0, 0.05);
+    /* Light transparent background */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Buttons section */
+.btnCon {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    flex-wrap: wrap;
+}
+
+.btnCon button {
+    background-color: rgba(0, 123, 255, 0.8);
+    /* Transparent blue */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Delete button style */
+.btnCon button#deleteBtn {
+    background-color: rgba(220, 53, 69, 0.8);
+    /* Transparent red */
+}
+
+/* Hover effects */
+.btnCon button:hover {
+    background-color: rgba(0, 123, 255, 1);
+    transform: scale(1.05);
+    /* Slight scale on hover */
+}
+
+.btnCon button#deleteBtn:hover {
+    background-color: rgba(220, 53, 69, 1);
+    transform: scale(1.05);
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+
+
+    .rowCon {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .btnCon {
+        flex-direction: column;
+    }
+
+    .btnCon button {
+        width: 100%;
+        /* Full width buttons for small screens */
+    }
+}
+
+
+
+/* Cards Section */
+.cards-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 40px 20px;
+}
+
+.card {
+    background: rgba(0, 0, 0, .4);
+    color: #ffffffba;
+    width: 90%;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.194);
+    border-radius: 10px;
+    text-align: center;
+    padding: 2px 20px;
+}
+
+
+.card h3 {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.addBtn {
+    border: none;
+    padding: 5px 15px;
+    background-color: #338ffbf2;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: sans-serif;
+    border-radius: 8px;
+    letter-spacing: 1px;
+    outline: none;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 500ms;
+}
+
+#addBtn:hover {
+    background: #338ffbb8;
+
+}
+
+.card p {
+    font-size: 16px;
+}
+
+/* Responsive styles */
+@media (max-width: 720px) {
+    .cards-section {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> complain_section */
+/* General styles */
+.complaint_card {
+    margin: 20px auto;
+    max-width: 90%;
+    /* Adjust for smaller screens */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Transparent background */
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+/* Container and flex layout */
+.containerComplaints {
+    padding: 20px;
+}
+
+.rowCon {
+    display: flex;
+    flex-wrap: wrap;
+    /* For better responsiveness */
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 15px;
+}
+
+/* Image section */
+.left {
+    flex: 0 0 100px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.left img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    /* Slight border */
+}
+
+/* Text content section */
+.right {
+    flex-grow: 1;
+    flex-basis: 200px;
+}
+
+.right h4 {
+    font-size: 18px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.right h6 {
+    font-size: 14px;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Complaint description section */
+.DescCon {
+    margin: 15px 0;
+}
+
+.DescCon h6 {
+    font-size: 14px;
+    color: #444;
+    background-color: rgba(0, 0, 0, 0.05);
+    /* Light transparent background */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Buttons section */
+.btnCon {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    flex-wrap: wrap;
+}
+
+.btnCon button {
+    background-color: rgba(0, 123, 255, 0.8);
+    /* Transparent blue */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Delete button style */
+.btnCon button#deleteBtn {
+    background-color: rgba(220, 53, 69, 0.8);
+    /* Transparent red */
+}
+
+/* Hover effects */
+.btnCon button:hover {
+    background-color: rgba(0, 123, 255, 1);
+    transform: scale(1.05);
+    /* Slight scale on hover */
+}
+
+.btnCon button#deleteBtn:hover {
+    background-color: rgba(220, 53, 69, 1);
+    transform: scale(1.05);
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+
+
+    .rowCon {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .btnCon {
+        flex-direction: column;
+    }
+
+    .btnCon button {
+        width: 100%;
+        /* Full width buttons for small screens */
+    }
+}
+
+
+
+/* //// Modal content */
+.modal-container {
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-image: linear-gradient(to right top, #1db7ffa9, #615fff, #f700add1, #ff4a60, #fe981afa);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+    height: 90%;
+    border-radius: 16px;
+    color: #ffffff;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.close-btn {
+    position: absolute;
+    font-size: 32px;
+    cursor: pointer;
+    top: 10px;
+    right: 15px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+.modal-content h2 {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    font-weight: 600;
+}
+
+.modal-content label {
+    margin-top: 10px;
+    margin-bottom: -5px;
+    font-weight: 500;
+}
+
+#hideInp {
+    padding: 6px;
+    border: none;
+    margin-left: 4%;
+}
+
+#hideInp input {
+    visibility: hidden;
+    margin-top: -2%;
+}
+
+.main {
+    width: 96%;
+    background: rgba(0, 0, 0, 0.5);
+    height: 3vh;
+    border-radius: 3px;
+    border: 2px solid lightsteelblue;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    margin-left: -3%;
+    margin-top: -10%;
+}
+
+.main span {
+    margin-left: 6px;
+    font-size: 12px;
+}
+
+.file-custom {
+    font-size: 10px !important;
+}
+
+.browse {
+    border: 2px solid lightblue;
+    padding: 8px 5px;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+}
+
+input {
+    padding: 10px 0;
+    font-size: 16px;
+    color: #dddddd !important;
+    letter-spacing: 1px;
+    border: none;
+    border-bottom: 1px solid #FFF;
+    outline: none;
+    background: transparent;
+    padding-left: 45px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.inputBox {
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 1200px) {
+    .modal-content {
+        width: 80%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .close-btn {
+        font-size: 28px;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 1500px) {
+    .modal-content #hideInp {
+        margin-top: 55px !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .modal-content #hideInp {
+        margin-top: 5% !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .modal-content #hideInp {
+        margin-top: 5% !important;
+    }
+}

@@ -1,0 +1,227 @@
+.profile {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(#894040b3, transparent);
+    padding: 17px;
+    border-radius: 14px;
+    box-shadow: 2px 2px 8px;
+    width: 60%;
+    color: #5e5c5c90;
+}
+
+.profile_text {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 12px rgba(128, 128, 128, 0.697);
+    font-size: 2rem;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    flex: 1;
+    color: white;
+    margin-left: 15px;
+    margin-top: 6px;
+    margin-bottom: 20px;
+}
+
+.editBtn i img {
+    width: 10%;
+    cursor: pointer;
+}
+
+.profileImage {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px -1px 16px #5655551c;
+    padding: 7px;
+    border-radius: 14px;
+    width: 30%;
+    margin-top: -13px;
+    margin-left: 3pc;
+}
+
+.profileImage img {
+    border-radius: 14px;
+}
+
+.editBtn {
+    text-align: center;
+    width: 50%;
+}
+
+.right {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    width: 100%;
+    margin-left: 20px;
+}
+
+.pfCaption {
+    position: inherit;
+    top: -25px;
+    font-size: 15px;
+}
+
+.m-b {
+    margin-bottom: 0;
+}
+
+.text_user {
+    margin-top: 7px;
+    color: wheat;
+}
+
+
+
+/* Media screen */
+
+
+@media (max-width: 940px) {
+    .profileImage {
+        margin-left: 3pc;
+    }
+}
+
+@media (max-width: 870px) {
+    .profileImage {
+        margin-left: 2.8pc;
+    }
+}
+
+@media (max-width: 800px) {
+    .profileImage {
+        margin-left: 2.4pc;
+    }
+}
+
+@media (max-width: 720px) {
+    .profileImage {
+        margin-left: 2.1pc;
+    }
+}
+
+@media (max-width: 630px) {
+    .profileImage {
+        margin-left: 1.8pc;
+    }
+}
+
+@media (max-width: 570px) {
+    .profileImage {
+        margin-left: 1.5pc;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .m-b {
+        font-size: 10px;
+    }
+
+    .text_user {
+        font-size: 8px;
+    }
+}
+
+/* Modal */
+.Modal {
+    position: fixed;
+    top: 0;
+    background: #000000b3;
+    width: 100%;
+    height: 100%;
+}
+
+
+.EditPf_mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 21px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px;
+    width: 85%;
+    background-image: linear-gradient(to right top, #1db7ffa9, #615fff, #f700add1, #ff4a60, #fe981afa);
+    color: #5e5c5c90;
+}
+
+.closeX {
+    color: white;
+    font-size: 44px;
+    position: fixed;
+    top: 5%;
+    right: 9%;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+input {
+    width: 78%;
+    margin-top: 6px;
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    border-bottom: 2px solid;
+}
+
+#select {
+    margin-top: 2px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid white;
+    padding: 3px 6px;
+    color: white;
+    outline: none;
+    width: 83%;
+}
+
+#select option {
+    color: #000000b3;
+}
+
+@media (max-width: 660px) {
+    .right_contain {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        color: white;
+        width: 100%;
+        margin-left: 20px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: space-around;
+        align-items: center;
+    }
+
+    .right_contain .row {
+        width: 80%;
+    }
+
+    .right_contain .row column-1 select {
+        margin-bottom: 7%;
+    }
+
+}
+
+#uploadPf {
+    cursor: pointer;
+}

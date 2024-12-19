@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script defer src="../init-firebase.js"></script>
+</head>
+
+<body>
+    <!-- loader -->
+    <div class="loader">
+        <div id="loader" class="loader-container">
+            <div class="spinner">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Complains</div>
+        <div class="resp">
+            <i id="toggleNav" class="fa-solid fa-bars bar"></i>
+        </div>
+        <ul id="toggleBarIcon" class="hide">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li class="user-icon">
+                <i class="fas fa-user"></i> <span id="displayUsername">Username</span>
+                <div class="dropdown">
+                    <a href="profile.html">Profile</a>
+                    <a href="#">Settings</a>
+                    <a onclick="logout()">Logout</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Profile section -->
+    <section class="profile">
+        <h1 class="profile_text">Profile</h1>
+
+        <div class="mainContainer">
+            <div class="left center">
+                <div class="profileImage" style="display: flex;
+                justify-content: center;
+                width: 100%;
+                text-align: center;
+                align-items: center;
+                margin: 0;"><img id="displayProfileImage" src="#" width="50%" alt="image">
+                </div>
+                <div class="caption" style="text-align: center;">
+                    <h4 style="margin-bottom: 6px;" id="PfName">Guest user</h4>
+                </div>
+                <div style="width: 100%;     width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;">
+                    <div class="editBtn" id="openModal"> <i><img src="../assets/images/edit-document.png" alt=""></i>
+                    </div>
+                </div>
+            </div>
+            <div class="right center">
+                <div class="row">
+                    <div class="column_1">
+                        <p class="m-b">Username</p>
+                        <h6 class="text_user" id="getUserName">Guest</h6>
+                    </div>
+                    <div class="column_1">
+                        <p class="m-b">Email</p>
+                        <h6 class="text_user" id="email">Guest@gmail.com</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column_1">
+                        <p class="m-b">Password</p>
+                        <h6 class="text_user" id="pass">Guest</h6>
+                    </div>
+                    <div class="column_1">
+                        <p class="m-b">caste</p>
+                        <h6 class="text_user" id="caste">Guest</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column_1">
+                        <p class="m-b">Location</p>
+                        <h6 class="text_user" id="locat">no location</h6>
+                    </div>
+                    <div class="column_1">
+                        <p class="m-b">Gender</p>
+                        <h6 class="text_user" id="gender">Male</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Complain's system. All Rights Reserved.
+    </footer>
+
+
+    <!-- Modal -->
+    <section id="showModal" style="display: none;" class="Modal">
+        <div class="profile">
+            <span class="closeX" id="closeModal">x</span>
+            <h1 class="profile_text">Edit Profile</h1>
+            <div class="EditPf_mainContainer">
+                <div class="left center">
+                    <input type="file" style="display: none;" name="" id="url">
+                    <label for="url" style="display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;">
+                        <div class="profileImage"><img id="displayProfileImg" src="#" width="70%" alt="image">
+                        </div>
+                    </label>
+                    <div class="caption" style="text-align: center;">
+                        <h4 style="margin-bottom: 6px;" id="userNewName">Guest user</h4>
+                    </div>
+                    <div class="editBtn" id="uploadPf"
+                        style="width: 100%; display: flex; justify-content: center; align-items: center;">
+                        <img width="4%" src="../assets/images/upload.svg" alt="">
+                    </div>
+                </div>
+                <div class="right center right_contain">
+                    <div class="row">
+                        <div class="column_1">
+                            <p class="m-b">Username</p>
+                            <input type="text" name="" id="name">
+                        </div>
+                        <div class="column_1">
+                            <p class="m-b">Email</p>
+                            <input type="email" name="" value="Guest@gmail.com" id="email" readonly>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column_1">
+                            <p class="m-b">Password</p>
+                            <input type="password" readonly value="********" name="password" id="password">
+                        </div>
+                        <div class="column_1">
+                            <p class="m-b">caste</p>
+                            <input type="text" name="" id="casteuser">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column_1">
+                            <p class="m-b">Location</p>
+                            <input type="text" name="" id="location">
+                        </div>
+                        <div class="column_1">
+                            <p class="m-b">Gender</p>
+                            <select name="option" id="select">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="../js/profile.js"></script>
+
+</html>

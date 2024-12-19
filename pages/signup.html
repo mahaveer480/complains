@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up Page</title>
+    <link rel="stylesheet" href="../css/signup.css">
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- firebase -->
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script defer src="../init-firebase.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <h2>Sign Up</h2>
+        <div class="inputBox">
+            <i class="fas fa-user icon"></i>
+            <input type="text" id="username" name="" required="">
+            <label>Username</label>
+            <p class="error" id="usernameErr"></p>
+        </div>
+        <div class="inputBox">
+            <i class="fas fa-envelope icon"></i>
+            <input type="email" id="email" name="email" required="">
+            <label>Email</label>
+            <p class="error" id="emailErr"></p>
+        </div>
+        <div class="inputBox">
+            <i class="fas fa-lock icon"></i>
+            <input type="password" id="password" name="password" required="">
+            <label>Password</label>
+            <p class="error" id="passwordErr"></p>
+            <!-- Eye Icon for toggling visibility -->
+            <i class="fas fa-eye icon-eye" id="togglePassword"></i>
+        </div>
+        <button style="width: 100%;" onclick="signup()">Sign in</button>
+        <div style="margin-top: 15px;">
+            <button style="width: 100%;" onclick="CuntinueWithGoogle()" class="continueWith"><i
+                    class="fab fa-google"></i> Continue with
+                Google</button>
+        </div>
+        <div style="margin-top: 8px;">
+            <button class="continueWith" onclick="continueWithFacebook()" style="width: 100%;"><i
+                    class="fab fa-facebook"></i> Continue with
+                Facebook</button>
+        </div>
+        <div class="wrap-contain">
+            <p style="font-size: 15px; color: white;">Already have an account? <a href="../index.html"
+                    style="color: rgb(221, 255, 0);">Sign In</a></p>
+        </div>
+    </div>
+
+    <script src="../js/signup.js"></script>
+</body>
+
+</html>
